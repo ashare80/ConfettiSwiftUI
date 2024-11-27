@@ -1,4 +1,4 @@
-// swift-tools-version:5.3
+// swift-tools-version: 6.0
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -6,16 +6,17 @@ import PackageDescription
 let package = Package(
     name: "ConfettiSwiftUI",
     platforms: [
-        .iOS(.v14),
-        .macOS(.v11),
-        .tvOS(.v14),
-        .watchOS(.v7)
+        .iOS(.v18),
+        .macOS(.v15),
+        .tvOS(.v18),
+        .watchOS(.v11),
     ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "ConfettiSwiftUI",
-            targets: ["ConfettiSwiftUI"]),
+            targets: ["ConfettiSwiftUI"]
+        ),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -27,11 +28,12 @@ let package = Package(
         .target(
             name: "ConfettiSwiftUI",
             dependencies: [],
-            path: "Sources"),
+            path: "Sources"
+        ),
         .testTarget(
             name: "ConfettiSwiftUITests",
             dependencies: ["ConfettiSwiftUI"],
-            path: "Tests"),
-        
+            path: "Tests"
+        ),
     ]
 )
